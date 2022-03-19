@@ -184,7 +184,7 @@ jobs:
     runs-on: [ubuntu-latest]
     needs: [get_plugin_info]
     outputs:
-      changelog: "${{ steps.create_changelog_text.outputs.body }}\n\n**Full Changelog**: https://github.com/iamscottxu/obs-rtspserver/compare/${{ steps.get_last_release.outputs.tag_name }}...${{ needs.get_plugin_info.outputs.git_tag_name }}"
+      changelog: "${{ steps.create_changelog_text.outputs.body }}\n\n**Full Changelog**: https://github.com/TuKerMaN/rtspserver_OBS/compare/${{ steps.get_last_release.outputs.tag_name }}...${{ needs.get_plugin_info.outputs.git_tag_name }}"
 
     steps:
       - name: 'Checkout plugin ${{ needs.get_plugin_info.outputs.git_tag_name }}'
